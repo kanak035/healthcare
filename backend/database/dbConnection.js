@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const dbConnection = () => {
   mongoose
-    .connect(process.env.MONGO_URI, {
+    .connect("mongodb://localhost:27017/new", {
       dbName: "MERN_STACK_HOSPITAL_MANAGEMENT_SYSTEM",
     })
     .then(() => {

@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     validate: [validator.isEmail, "Provide A Valid Email!"],
   },
   phone: {
-    type: String,
+    type: Number,
     required: [true, "Phone Is Required!"],
     minLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
     maxLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
@@ -44,7 +44,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Password Is Required!"],
     minLength: [8, "Password Must Contain At Least 8 Characters!"],
-    select: false,
+    select: true,
   },
   role: {
     type: String,
